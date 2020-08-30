@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".OneTimeSplashActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_intro"
+        android:src="@drawable/intro_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350sdp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicatorView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            app:piv_count="4"
+            app:piv_animationType="slide"
+            app:piv_viewPager="@id/viewpager_intro"
+            app:piv_selectedColor="@color/colorPrimary"
+            app:piv_unselectedColor="#D7F3D0"
+            app:piv_interactiveAnimation="true"
+            app:piv_radius="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            />
+        <Button
+            android:id="@+id/btn_accept_and_continue"
+            android:background="@drawable/rounded_primary"
+            android:text="Accept &amp; Countinue"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/avenir_heavy"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/lbl_bottom_line"
+            android:fontFamily="@font/avenir_medium"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:textColorLink="@color/colorPrimary"
+            android:text="Be proceeding you agree with Terms of Service and Privacy Policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

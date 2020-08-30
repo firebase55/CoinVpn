@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_speed_test"
+        android:icon="@drawable/speed_test"
+        android:title="Speed Test" />
+
+    <item
+        android:id="@+id/nav_coin"
+        android:icon="@drawable/wallet"
+        android:title="Coin" />
+
+</menu>

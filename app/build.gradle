@@ -1,0 +1,98 @@
+//plugins for onesignal
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+}
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+//plugins for onesignal
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.A_Developer.CoinVpn"
+        manifestPlaceholders = [onesignal_app_id               : '8589346a-09a5-4e8f-bdf7-0f8bb23bc39e',
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: 'REMOTE']
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.tab_icon_color.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    testImplementation 'junit:junit:4.12'
+
+    //  androidTestImplementation 'androidx.tab_icon_color:runner:1.2.0'
+//    androidTestImplementation 'androidx.tab_icon_color.espresso:espresso-core:3.2.0'
+
+    //prefrence manager for androidx
+    implementation "androidx.preference:preference-ktx:1.1.0"
+    //    library for VPN
+    implementation 'com.github.AnchorFreePartner.hydra-sdk-android:sdk:2.4.0'
+
+    //    butterknief libarary
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    //    library for glide
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //    library for dp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
+
+    //okhttps
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    //jackson for string to jsonpojo and jsonpojo to string
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+'
+
+
+    //facebook ads
+    implementation 'com.facebook.android:audience-network-sdk:5.5.0'
+
+    //google ads
+    implementation 'com.google.android.gms:play-services-ads:18.3.0'
+
+    //View paeger Indicator
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+
+    //onesignal notification
+    implementation 'com.onesignal:OneSignal:3.11.1'
+
+    //firbase
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+}
+apply plugin: 'com.google.gms.google-services'

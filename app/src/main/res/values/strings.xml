@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Lemon VPN</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="google_sample_app_id">ca-app-pub-8190497928238915~6723428473</string>
+    <string name="google_banner_id">ca-app-pub-8190497928238915/8231951263</string>
+    <string name="google_interstitial_id">ca-app-pub-8190497928238915/7202295843</string>
+    <string name="google_native_id">ca-app-pub-8190497928238915/9704815031</string>
+    <string name="google_reward_video">ca-app-pub-8190497928238915/1786317635</string>
+
+    <string name="facebook_banner_id">2734230909992705_2734238349991961</string>
+    <string name="facebook_interstitial_id">2734230909992705_2734240213325108</string>
+    <string name="facebook_native_ad">2734230909992705_2734239736658489</string>
+
+    <string name="server_price">server_price</string>
+
+    <string name="intro_bottom_line">Be proceeding you agree with Terms of service and privacy policy</string>
+
+</resources>
